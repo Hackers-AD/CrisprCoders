@@ -11,5 +11,5 @@ A Django web app with authentication server and resources server. The resources 
 **#Resources Server**
 --> The resources are served from the resources app. It contains a simple class based view that return the reponse with static data that is further used by web application for rendering the CV.
 
-#Installing and Running this App
---> Download the zip file and unzip it.
+**#Installing and Running this App**
+1. Download the zip file and unzip it.
