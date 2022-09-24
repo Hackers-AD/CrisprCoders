@@ -13,7 +13,7 @@ A Django web app with authentication server and resources server. The resources 
 
 **#Installing and Running this App**
 1. Download the zip file and unzip it.
-2. Download the required version of python and django on your local machine. You can use virtual environment.
+2. Download the required version of python and django on your local machine. You can also use virtual environment.
 
 **#In command line:**
 
