@@ -1,0 +1,32 @@
+{%load static%}
+<div>
+	<div class="h3 mt-5 home-headings">Interest/Skills</div>
+	<ul>
+		{% for skill in skills%}
+		<li>
+			{{skill}}
+		</li>
+		{% endfor %}
+		<div class="py-2">
+			<div id="skill-graphs"></div>
+		</div>
+	</ul>
+
+	<div class="h3 mt-5 home-headings">Working Experience</div>
+	<ul>
+		{% for exp in experience%}
+		<li>
+			<b>{{exp.position}}</b>: {{exp.start_date}} to {{exp.end_date}}, {{exp.company}}
+			(<a href="{{exp.company_url}}">{{exp.company_url}}</a>)
+		</li>
+		{% endfor %}
+	</ul>
+	<div class="h3 mt-5 home-headings">Academic Projects</div>
+	<ul>
+		{% for project in projects%}
+		<li>
+			{{project}}
+		</li>
+		{% endfor %}
+	</ul>
+</div>

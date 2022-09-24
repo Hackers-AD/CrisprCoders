@@ -1,0 +1,33 @@
+{%extends 'resources/base.html'%}
+{%load static%}
+{%block title%}{{request.user.username}} | Home{%endblock%}
+
+{%block body%}
+	{%include 'resources/navbar.html'%}
+	<div class="container my-3" id="printable">
+		<div class="row align-items-center pt-5">
+			<div class="col-md-8 my-2">
+				<div class="h4">Hello, my name is 
+					<span class="name">
+						{% if request.user.first_name %} 
+							{{request.user.first_name}} 
+						{% else %} 
+							{{request.user.username}} 
+						{% endif %}.
+					</span>
+				</div>
+				<div class="h3">I'm a 
+					<span class="designation" id="designation">Web Developer.</span>
+				</div>
+				<div>I'm a software developer with an professional experience of more than 1 year. I am an engineering graduate in the field of Electronics and Communication.</div>
+				{%include 'resources/personaldetails.html'%}
+			</div>
+			<div class="col-md-4 my-2">
+				<img src="{%static 'resources/img/me.png'%}" class="w-100 profile-image">
+			</div>
+		</div>
+
+		{%include 'resources/education.html'%}
+		{%include 'resources/experience.html'%}
+	</div>
+{%endblock%}

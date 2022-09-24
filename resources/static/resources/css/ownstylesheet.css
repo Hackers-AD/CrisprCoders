@@ -1,0 +1,86 @@
+body{
+	font-family: sans-serif;
+	background-color: #f0f0f0;
+}
+.navbar-brand{
+	font-family: sans-serif;
+}
+.brand-letter{
+	color: orangered;
+	font-family: algerian;
+	font-weight: bold;
+}
+.link{
+	color: orangered;
+}
+.link:hover{
+	text-decoration: none;
+	color: #fff;
+}
+.profile-image{
+	border-radius: 20px 20px;
+	border:  1px solid orangered;
+}
+
+/*Home CSS*/
+.name{
+	font-family: Times New Roman; 
+	font-weight: bold;
+}
+.designation{
+	font-family: cursive; 
+	font-style: italic;
+	color: orangered;
+}
+.home-headings{
+	color: orangered;
+	font-family: algerian;
+}
+
+/*Service CSS*/
+.service-item{
+	border:  1px dashed orangered;
+	border-radius: 15px 15px;
+}
+.service_icon{
+	color: orangered;
+	background-color: #fff;
+	border-radius: 50%;
+}
+.service_title{
+	color: orangered;
+	font-family: algerian;
+}
+.service_description{
+	font-style: italic;
+}
+
+/*Portfolio CSS*/
+.project-image{
+	filter: brightness(50%);
+	border:  3px solid orangered;
+	border-radius: 10px 10px;
+}
+.project-item{
+	position:  relative;
+}
+.project-name{
+	font-family: algerian;
+}
+.project-text{
+	color: orangered;
+}
+
+/*Contact CSS*/
+.contact-item{
+
+}
+.contact-title{
+	font-family: algerian;
+}
+.contact-icon{
+	color: orangered;
+}
+.contact-detail{
+	font-style: italic;
+}

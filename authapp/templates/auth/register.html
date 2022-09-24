@@ -1,0 +1,63 @@
+{% extends 'resources/base.html' %}
+
+{% block title %} CrisprCoders | Register {% endblock %}
+
+{% block body %}
+<div>
+    {% include 'resources/navbar.html' %}
+    <div class="row justify-content-center">
+        <div class="col-md-6 px-0 card">
+            <div class="card-header px-4">
+                <span class="fa fa-user-circle text-primary"></span>
+                <span class="">Create a new account at <span class="text-primary">C</span>rispr<span class="text-primary">C</span>oders</span>
+            </div>
+            <div class="card-body mx-2">
+                <form action="" method="post">
+                    {% csrf_token %}
+
+                    {% if errors %}
+                    <div class="font-weight-bold"> <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
+                        Please correct the following!
+                    </div>
+                    <ul>
+                        {% for error in errors %}
+                            <li>
+                                <small class="form-text text-danger">{{error}}</small>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                    {%else%}
+                        <small class="form-text text-muted">Please provide the following details.</small>
+                    {% endif %}
+
+                    <div class="form-group">
+                        <label for="full_name">Full name</label>
+                        <input type="text" class="form-control" name="full_name" placeholder="Full name" value={{full_name}}>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" name="username" placeholder="Username" required value={{username}}>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" name="email" placeholder="Enter email" value={{email}}>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="password">New password</label>
+                            <input type="password" class="form-control" name="new_password" placeholder="New password" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="password1">Confirm password</label>
+                            <input type="password" class="form-control" name="confirm_password" placeholder="Confirm password" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-2">Create Account</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
